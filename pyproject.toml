@@ -1,0 +1,17 @@
+[project]
+name = "sizzle-backend"
+version = "1.0.0"
+description = "Sizzle Chef Booking Platform API"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "pydantic",
+    "httpx",
+    "pyjwt",
+]
+
+[dependency-groups]
+dev = [
+    "workers-py",
+    "workers-runtime-sdk",
+]

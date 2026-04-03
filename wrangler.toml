@@ -1,0 +1,21 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "sizzle-backend"
+main = "src/entry.py"
+compatibility_date = "2024-10-11"
+compatibility_flags = ["python_workers"]
+
+[vars]
+APP_NAME = "Sizzle"
+APP_VERSION = "1.0.0"
+EMAIL_FROM = "Sizzle <onboarding@resend.dev>"
+ALLOWED_ORIGINS = "https://www.sizzzle.me,https://sizzleapp.pages.dev,capacitor://localhost,http://localhost,http://localhost:5173"
+
+# Secrets (set with: npx wrangler secret put SECRET_NAME)
+# SUPABASE_URL
+# SUPABASE_SERVICE_ROLE_KEY
+# JWT_SECRET_KEY
+# RESEND_API_KEY
+
+[[kv_namespaces]]
+binding = "OTP_STORE"
+id = "0427215ec8cb49868347f9fc1304f4fb"

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+.venv-workers/
+node_modules/
+.wrangler/

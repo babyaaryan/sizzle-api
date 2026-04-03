@@ -23,10 +23,19 @@ from auth import (
 
 app = FastAPI(title="Sizzle API", version="1.0.0")
 
-# CORS
+# CORS — restrict to known origins only
+ALLOWED_ORIGINS = [
+    "https://www.sizzzle.me",
+    "https://sizzzle.me",
+    "https://sizzleapp.pages.dev",
+    "capacitor://localhost",
+    "http://localhost",
+    "http://localhost:5173",
+    "http://localhost:8000",
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

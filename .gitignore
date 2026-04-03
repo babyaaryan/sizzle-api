@@ -4,3 +4,8 @@ __pycache__/
 .venv-workers/
 node_modules/
 .wrangler/
+.env
+.env.*
+.dev.vars
+*.pem
+*.key

@@ -1,11 +1,10 @@
 """
-Cloudflare Worker entry point — bridges to FastAPI via ASGI.
+Cloudflare Worker entry point — lightweight Python handler.
 """
 from workers import WorkerEntrypoint
-import asgi
-from app import app
+from app import handle_request
 
 
 class Default(WorkerEntrypoint):
-    async def fetch(self, request):
-        return await asgi.fetch(app, request, self.env)
+    async def on_fetch(self, request):
+        return await handle_request(request, self.env)

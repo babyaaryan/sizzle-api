@@ -1,0 +1,5 @@
+.venv
+.venv-workers
+node_modules
+.wrangler
+.git

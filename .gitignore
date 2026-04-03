@@ -4,6 +4,7 @@ __pycache__/
 .venv-workers/
 node_modules/
 .wrangler/
+python_modules/
 .env
 .env.*
 .dev.vars
